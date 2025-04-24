@@ -13,10 +13,10 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   background-color: var(--bg-dark);
   color: var(--text);
-  line-height: 1.7;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  line-height: 1.7;
 }
 
 .container {
@@ -26,7 +26,6 @@ body {
   padding: 20px;
 }
 
-/* Starfield background */
 .stars, .stars2 {
   position: fixed;
   top: 0;
@@ -44,26 +43,17 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at center, 
-    rgba(108, 99, 255, 0.1) 0%, 
-    rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
-.stars::after {
-  animation: animStar 100s linear infinite;
-}
-
-.stars2::after {
-  animation: animStar 150s linear infinite;
-  opacity: 0.5;
-}
+.stars::after { animation: animStar 100s linear infinite; }
+.stars2::after { animation: animStar 150s linear infinite; opacity: 0.5; }
 
 @keyframes animStar {
   from { transform: translateY(0); }
   to { transform: translateY(-1000px); }
 }
 
-/* Profile section */
 .profile-card {
   display: flex;
   flex-direction: column;
@@ -104,7 +94,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Glass cards */
 .glass-card {
   background: var(--glass);
   backdrop-filter: blur(10px);
@@ -133,122 +122,69 @@ h2 {
   font-size: 1.2rem;
 }
 
-/* Timeline */
+/* Timeline FIXED */
 .timeline {
   position: relative;
-  padding-left: 30px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 60px;
+  border-left: 2px solid var(--accent);
+  margin-top: 20px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -41px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  border: 4px solid var(--bg-darker);
 }
 
 .timeline-date {
   position: absolute;
-  left: -70px;
+  left: -100px;
   top: 0;
-  color: var(--accent);
-  font-weight: 500;
+  color: var(--text-light);
+  background-color: var(--bg-darker);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-.timeline-content {
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.timeline-content h4 {
+.timeline-content h2 {
   margin-top: 0;
-  color: var(--text-light);
+  color: var(--accent-light);
 }
 
-/* Highlights */
-.highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.highlight-item {
-  background: rgba(108, 99, 255, 0.1);
-  border: 1px solid var(--glass-border);
-  padding: 10px 15px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-}
-
-.highlight-item i {
-  color: var(--accent);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px 0;
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: var(--text-light);
-  opacity: 0.7;
-}
-
-footer i {
-  color: var(--accent);
-}
-
-/* Social links */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.social-links a {
-  color: var(--text);
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--accent);
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .profile-card {
-    margin: 30px 0;
+  .timeline {
+    padding-left: 0;
+    border-left: none;
   }
-  
-  .profile-img {
-    width: 150px;
-    height: 150px;
+
+  .timeline-item {
+    padding-left: 0;
   }
-  
-  h1 {
-    font-size: 2rem;
+
+  .timeline-marker {
+    display: none;
   }
-  
+
   .timeline-date {
     position: static;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .timeline::before {
-    display: none;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

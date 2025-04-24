@@ -3,95 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guilherme Nunes | Software Engineer</title>
+  <title>Guilherme Nunes | Senior Software Engineer</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  
   <header>
     <div class="container">
-      <button id="theme-toggle" aria-label="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-      <div class="profile">
+      <div class="profile-card">
         <img src="assets/profile.jpg" alt="Guilherme Nunes" class="profile-img">
-        <h1>Guilherme Nunes</h1>
-        <h2>Software Engineer | Ruby on Rails | Global Problem-Solver</h2>
+        <div class="profile-text">
+          <h1>Guilherme Nunes</h1>
+          <h2>Senior Software Engineer</h2>
+          <div class="tagline">Building bridges between code and cultures</div>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:guilherme.nunes.engineer@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section id="about">
-      <h3>About Me</h3>
-      <p>From a small town in Brazil to remote teams across the globe, I solve technical challenges while fostering collaboration across cultures. My work at <strong>Procore</strong> and <strong>SRS Acquiorn</strong>—paired with volunteer service at the <strong>Bahá’í World Centre</strong>—taught me that great software isn’t just about code; it’s about understanding people.</p>
-    </section>
-
-    <section id="global">
-      <h3>Global Collaborations</h3>
-      <div class="map-placeholder">
-        <!-- Replace with your map image or embed -->
-        <img src="assets/world-map.png" alt="Global collaborations map">
-      </div>
-      <p>I’ve worked with teams in the <strong>U.S., France, and Brazil</strong>, refining processes like Scrum to accommodate time zones and cultural work styles. At Procore, I implemented email localization for <strong>10+ languages</strong>—because a mistranslated deadline can cost millions.</p>
-    </section>
-
-    <section id="skills">
-      <h3>Skills & Tools</h3>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4>Languages</h4>
-          <ul>
-            <li>Ruby</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-          </ul>
+    <section class="glass-card">
+      <h3><i class="fas fa-globe"></i> Global Collaborator</h3>
+      <p>From Dourados, Brazil to international tech teams, I specialize in creating solutions that work across borders. My experience at Procore and SRS Acquiorn taught me how to build software that respects cultural differences while maintaining technical excellence.</p>
+      
+      <div class="highlights">
+        <div class="highlight-item">
+          <i class="fas fa-code"></i>
+          <span>Ruby on Rails Expert</span>
         </div>
-        <div class="skill-category">
-          <h4>Frameworks</h4>
-          <ul>
-            <li>Ruby on Rails</li>
-            <li>React</li>
-            <li>Vue.js</li>
-          </ul>
+        <div class="highlight-item">
+          <i class="fas fa-users"></i>
+          <span>Remote Work Specialist</span>
         </div>
-        <div class="skill-category">
-          <h4>Tools</h4>
-          <ul>
-            <li>Docker</li>
-            <li>AWS</li>
-            <li>Git</li>
-          </ul>
+        <div class="highlight-item">
+          <i class="fas fa-language"></i>
+          <span>Multilingual Solutions</span>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h3>Projects</h3>
-      <div class="project-card">
-        <h4>Procore Email Migration</h4>
-        <p>Migrated SendGrid to Braze, implementing localization and feature flags for 10+ languages.</p>
-      </div>
-      <div class="project-card">
-        <h4>Nobordist Financial System</h4>
-        <p>Refactored frontend with VueX and optimized backend APIs for international logistics.</p>
+    <section class="glass-card">
+      <h3><i class="fas fa-briefcase"></i> Experience Highlights</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h4>Procore Technologies</h4>
+            <p>Led email system migration from SendGrid to Braze, implementing localization for 10+ languages.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h4>SRS Acquiorn</h4>
+            <p>Developed financial systems with Ruby on Rails for international transactions.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="fun-fact">
-      <h3>Beyond Code</h3>
-      <p>🌱 <strong>Fun Fact:</strong> I pruned 100+ olive trees at the Bahá’í World Centre! Gardening taught me patience and attention to ecosystems—much like debugging distributed systems.</p>
+    <section class="glass-card">
+      <h3><i class="fas fa-seedling"></i> Beyond Code</h3>
+      <p>As a volunteer at the Bahá'í World Centre, I cultivated both gardens and cross-cultural relationships. This experience informs my approach to software development - patient, detail-oriented, and always considering the human element.</p>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <div class="social-links">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:guilherme.nunes.engineer@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p>© 2024 Guilherme Nunes</p>
+      <p>© 2024 Guilherme Nunes | Made with <i class="fas fa-heart"></i> and Ruby</p>
     </div>
   </footer>
 

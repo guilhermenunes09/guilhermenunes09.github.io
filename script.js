@@ -1,13 +1,22 @@
-// Dark mode toggle
-const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
+// Animate elements when they come into view
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+}, { threshold: 0.1 });
 
-if (currentTheme === 'dark') {
-  document.body.setAttribute('data-theme', 'dark');
-}
+document.querySelectorAll('.glass-card, .profile-card').forEach(el => {
+  observer.observe(el);
+});
 
-themeToggle.addEventListener('click', () => {
-  const isDark = document.body.getAttribute('data-theme') === 'dark';
-  document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });

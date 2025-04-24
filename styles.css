@@ -1,0 +1,100 @@
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+  --accent-color: #6c63ff;
+  --card-bg: #fff;
+  --border-color: #e1e4e8;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f8f9fa;
+  --accent-color: #8a7cff;
+  --card-bg: #1e1e1e;
+  --border-color: #333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-color);
+}
+
+h1, h2, h3, h4 {
+  color: var(--accent-color);
+}
+
+section {
+  margin: 40px 0;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  margin: 15px 0;
+  padding: 15px;
+  border-left: 3px solid var(--accent-color);
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.social-links {
+  margin: 10px 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+/* Dark mode toggle icon */
+[data-theme="dark"] #theme-toggle .fa-moon::before {
+  content: "\f185"; /* Sun icon */
+}
